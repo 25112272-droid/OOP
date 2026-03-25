@@ -1,0 +1,25 @@
+import math
+from turtle import circle
+class Point:
+    def __init__(self, x=0, y=0):
+        self .__x=x
+        self .__y=y
+        
+    def get_x(self):
+        return self.__x
+
+    def get_y(self):
+        return self.__y
+class Cricle:
+    def __init__(self, center=Point(), radius = 0):
+        self .__self.center = center
+        self .__self.radius = radius
+    def point_in_cricle (self, point):
+        distance = math.hypot((point.get_x() - self.__center.get_x()), (point.get_y() - self.__center.get_y()))
+        return distance <= self.__radius
+# Example usage:
+tam = Point(150, 100)
+hinh_tron = circle (tam, 75)
+diem_kiem_tra = Point(160, 110)
+    
+print("Ket qua kiem tra:", hinh_tron.point_in_circle(diem_kiem_tra))
